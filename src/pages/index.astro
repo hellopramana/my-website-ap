@@ -1,17 +1,74 @@
 ---
-
+import Layout from "../layouts/default.astro";
+import { getCollection, render } from "astro:content";
+const allBlog = await getCollection("blog");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  pageTitle="Aditya Pramana | Home"
+  description="Visual Design & Web Developer"
+>
+  <div class="wrapper">
+    <section class="hero">
+      <div class="hero__wrapper">
+        <img
+          src="/src/assets/aditya-photo.png"
+          alt="headshot of Aditya Pramana"
+          class="hero__image"
+          width="75"
+          height="75"
+        />
+        <h1 class="hero__title">
+          Transform abstract idea into visual & result
+        </h1>
+        <p class="hero__text">
+          Hey, I'm Aditya! I'm a web designer and developer with a strong visual
+          design background. I work with startups and business owners to build
+          beautiful websites that actually grow your business. I'm fueled by
+          great coffee and love capturing life through photography!
+        </p>
+      </div>
+    </section>
+
+    <section class="writing">
+      <div class="wrapper">
+        <ul>
+          {
+            allBlog.map((post) => {
+              return (
+                <li>
+                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  /* Hero Home Page */
+  .hero__wrapper {
+    padding-block-start: var(--padding-120);
+    padding-block-end: var(--padding-80);
+    display: grid;
+    row-gap: 20px;
+
+    .hero__image {
+      width: auto;
+    }
+
+    .hero__title {
+      font-family: "Petrona Variable", serif;
+      font-weight: 500;
+      font-size: var(--text-heading-l);
+    }
+
+    .hero__text {
+      font-size: var(--text-body-l);
+      line-height: 1.4;
+    }
+  }
+</style>

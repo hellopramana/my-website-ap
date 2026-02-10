@@ -1,0 +1,51 @@
+---
+import menus from "../collections/menus.json";
+---
+
+<nav class="wrapper nav__wrapper">
+  <ul class="nav__links">
+    {
+      menus.map((menu) => {
+        return (
+          <li class="nav__item">
+            <a href={menu.url} class="nav__link">
+              {menu.name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style>
+  /* Navigation */
+  .nav__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--padding-20);
+  }
+  .nav__links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav__item {
+    list-style: none;
+    display: inline;
+  }
+
+  .nav__link {
+    color: var(--text-dark);
+    font-size: var(--text-navlink);
+    line-height: 1em;
+    text-decoration: none;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  .nav__link:hover {
+    opacity: 0.5;
+  }
+</style>

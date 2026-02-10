@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Tone App",
+    "description": "Photo and video editing for iOS",
+    "tags": ["app", "ui/ux"],
+    "image": "/assets/Tone-app.jpg",
+    "video": "/",
+    "url": "/",
+    "isShow": true
+  },
+  {
+    "name": "PluviaDev",
+    "description": "Website revamp",
+    "tags": ["web design", "ui/ux"],
+    "image": "/assets/pluvia.jpg",
+    "video": "/",
+    "url": "/",
+    "isShow": true
+  },
+  {
+    "name": "Kanaka Foundation",
+    "description": "Company profile website for Kanaka Foundation",
+    "tags": ["web design", "web development", "ui/ux"],
+    "image": "/assets/kanaka.jpg",
+    "video": "/",
+    "url": "/",
+    "isShow": true
+  }
+]

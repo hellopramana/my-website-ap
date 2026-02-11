@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Stewart Strong",
+    "jobTitle": "Analog Uluwatu",
+    "testimonial": "Ive worked with Adi for over 3 years now. I keep coming back to him because he is fast to work with, responsive and easy to communicate with.",
+    "featured": true,
+    "image": "../src/assets/Stew.png"
+  },
+  {
+    "name": "Jack Morris",
+    "jobTitle": "Founder of Tone App",
+    "testimonial": "It’s been a pleasure working with Aditya for a long term basis now. He is very responsive, fast, and provides high quality work each time.",
+    "featured": true,
+    "image": "../src/assets/Jack.png"
+  },
+  {
+    "name": "Yudo Timtim",
+    "jobTitle": "Founder of Dayahidup",
+    "testimonial": "Adit has made significant contributions to the web design development of Dayahidup. His quick response and communicative nature greatly assisted in completing the Dayahidup design project on target.",
+    "featured": true,
+    "image": "../src/assets/Yudo.png"
+  },
+  {
+    "name": "Victoria",
+    "jobTitle": "Sales & Marketing Manager",
+    "testimonial": "Very professional , quick response and easy to communicate",
+    "featured": true,
+    "image": "../src/assets/Victoria.png"
+  }
+]

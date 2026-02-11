@@ -2,8 +2,9 @@
 import BlogLayout from "../../layouts/blogLayout.astro";
 
 import { getCollection } from "astro:content";
-import { render } from "astro:content";
+import { render } from "astro:content"; //render content from entry
 
+// function to create dynamic route for collection entry(item)
 export async function getStaticPaths() {
   const allBlog = await getCollection("blog");
 

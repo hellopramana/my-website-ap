@@ -1,0 +1,40 @@
+---
+import ProjectCard from "../ProjectCard.astro";
+
+import featuredWorks from "../../collections/featuredworks.json";
+---
+
+<!-- featured works -->
+<section class="featured-works">
+  <div class="wrapper">
+    <h1>--TO DO: STYLING WORK SECTION--</h1>
+    <section class="latest-projects">
+      <div class="wrapper projects__wrapper">
+        <h2 class="projects__heading">Latest Projects</h2>
+        <div class="projects__list">
+          {
+            featuredWorks.map((work) => {
+              return <ProjectCard img={work.image} url={work.url} />;
+            })
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<style is:global>
+  .projects__wrapper {
+    .projects__heading {
+      font-size: var(--text-heading-m);
+      font-family: "Petrona Variable";
+      font-weight: 500;
+      margin-block-end: 40px;
+    }
+
+    .projects__list {
+      display: flex;
+      gap: 20px 20px;
+    }
+  }
+</style>

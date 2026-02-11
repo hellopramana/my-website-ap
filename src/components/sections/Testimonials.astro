@@ -1,0 +1,91 @@
+---
+import allTestimonials from "../../collections/testimonials.json";
+---
+
+<!-- Testimonials SECTION -->
+<section class="testimonials">
+  <div class="wrapper testimonials__wrapper">
+    <h2 class="testimonials__heading">Trusted by leaders and founders</h2>
+    <div class="testimonials__list">
+      {
+        allTestimonials.map((testimonial) => {
+          if (testimonial.featured === true) {
+            return (
+              <div class="testimonials__item">
+                <div class="testimonials__profile">
+                  <img
+                    src={testimonial.image}
+                    alt="this is preview"
+                    class="testimonials__image"
+                    width="64"
+                    height="64"
+                  />
+                  <div class="testimonials__profile-detail">
+                    <h3 class="testimonials__name">{testimonial.name}</h3>
+                    <p class="testimonials__title">{testimonial.jobTitle}</p>
+                  </div>
+                </div>
+                <p class="testimonials__text">{testimonial.testimonial}</p>
+              </div>
+            );
+          }
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Testimonials */
+
+  .testimonials__wrapper {
+    .testimonials__heading {
+      font-family: "Petrona Variable", serif;
+      font-size: var(--text-heading-m);
+      font-weight: 500;
+      margin-block-end: 40px;
+    }
+
+    .testimonials__list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .testimonials__item {
+      display: grid;
+      background-color: var(--c-testimonial-bg);
+      padding: var(--padding-20);
+      row-gap: 20px;
+      border-radius: 8px;
+      filter: drop-shadow(0 0 0.2px black 0.1);
+    }
+
+    .testimonials__profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testimonials__image {
+    }
+
+    .testimonials__profile-detail {
+      display: grid;
+      row-gap: 8px;
+    }
+
+    .testimonials__name {
+      font-size: var(--text-heading-s);
+      font-family: "Petrona Variable", serif;
+      font-weight: 700;
+    }
+
+    .testimonials__title {
+      font-size: var(--text-body-s);
+    }
+
+    .testimonials__text {
+      line-height: 1.5;
+    }
+  }
+</style>

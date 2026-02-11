@@ -2,50 +2,55 @@
 import Layout from "../layouts/default.astro";
 import { getCollection, render } from "astro:content";
 const allBlog = await getCollection("blog");
+
+import FeaturedWork from "../components/sections/FeaturedWorks.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
 ---
 
 <Layout
   pageTitle="Aditya Pramana | Home"
   description="Visual Design & Web Developer"
 >
-  <div class="wrapper">
-    <section class="hero">
-      <div class="hero__wrapper">
-        <img
-          src="/src/assets/aditya-photo.png"
-          alt="headshot of Aditya Pramana"
-          class="hero__image"
-          width="75"
-          height="75"
-        />
-        <h1 class="hero__title">
-          Transform abstract idea into visual & result
-        </h1>
-        <p class="hero__text">
-          Hey, I'm Aditya! I'm a web designer and developer with a strong visual
-          design background. I work with startups and business owners to build
-          beautiful websites that actually grow your business. I'm fueled by
-          great coffee and love capturing life through photography!
-        </p>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="wrapper hero__wrapper">
+      <img
+        src="/src/assets/aditya-photo.png"
+        alt="headshot of Aditya Pramana"
+        class="hero__image"
+        width="75"
+        height="75"
+      />
+      <h1 class="hero__title">Transform abstract idea into visual & result</h1>
+      <p class="hero__text">
+        Hey, I'm Aditya! I'm a web designer and developer with a strong visual
+        design background. I work with startups and business owners to build
+        beautiful websites that actually grow your business. I'm fueled by great
+        coffee and love capturing life through photography!
+      </p>
+    </div>
+  </section>
 
-    <section class="writing">
-      <div class="wrapper">
-        <ul>
-          {
-            allBlog.map((post) => {
-              return (
-                <li>
-                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </div>
-    </section>
-  </div>
+  <FeaturedWork />
+
+  <Testimonials />
+
+  <!-- WRITING SECTION -->
+  <section class="writing">
+    <div class="wrapper">
+      <h1>--TO DO: STYLING BLOG SECTION--</h1>
+      <ul>
+        {
+          allBlog.map((post) => {
+            return (
+              <li>
+                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </section>
 </Layout>
 
 <style>

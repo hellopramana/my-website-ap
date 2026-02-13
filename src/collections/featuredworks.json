@@ -1,20 +1,20 @@
 [
   {
+    "name": "ASC Group Web Revamp",
+    "description": "ASC Group, a leading one-stop event organizer needed a digital presence that matched their industry expertise.",
+    "image": "/src/assets/asc.jpg",
+    "url": "https://www.behance.net/gallery/239385391/Web-Design-Development-ASC-Group"
+  },
+  {
+    "name": "Kanaka Foundation Website",
+    "description": "I help Kanaka Foundation to design and develop their website. The focus is to highlight their services and activities on social impacts.",
+    "image": "/src/assets/kanaka.jpg",
+    "url": "https://dribbble.com/shots/26356762-Web-Design-Wordpress-Development-for-Kanaka-Foundation"
+  },
+  {
     "name": "PluviaDev",
     "description": "Designing joyful and modern website to convey cutting-edge solutions for PluviaDev, a software developer agency.",
     "image": "/src/assets/pluvia.jpg",
     "url": "https://www.behance.net/gallery/238252545/Web-Design-PluviaDev"
-  },
-  {
-    "name": "ASC Group Web Revamp",
-    "description": "ASC Group, a leading one-stop event organizer needed a digital presence that matched their industry expertise.",
-    "image": "/src/assets/Tone-app.jpg",
-    "url": "https://www.behance.net/gallery/239385391/Web-Design-Development-ASC-Group"
-  },
-  {
-    "name": "ASC Group Web Revamp",
-    "description": "ASC Group, a leading one-stop event organizer needed a digital presence that matched their industry expertise.",
-    "image": "/src/assets/Tone-app.jpg",
-    "url": "https://www.behance.net/gallery/239385391/Web-Design-Development-ASC-Group"
   }
 ]

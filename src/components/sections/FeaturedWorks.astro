@@ -6,21 +6,18 @@ import featuredWorks from "../../collections/featuredworks.json";
 
 <!-- featured works -->
 <section class="featured-works">
-  <div class="wrapper">
-    <h1>--TO DO: STYLING WORK SECTION--</h1>
-    <section class="latest-projects">
-      <div class="wrapper projects__wrapper">
-        <h2 class="projects__heading">Latest Projects</h2>
-        <div class="projects__list">
-          {
-            featuredWorks.map((work) => {
-              return <ProjectCard img={work.image} url={work.url} />;
-            })
-          }
-        </div>
+  <section class="latest-projects">
+    <div class="wrapper projects__wrapper">
+      <h2 class="projects__heading">Latest Projects</h2>
+      <div class="projects__list">
+        {
+          featuredWorks.map((work) => {
+            return <ProjectCard img={work.image} url={work.url} />;
+          })
+        }
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </section>
 
 <style is:global>

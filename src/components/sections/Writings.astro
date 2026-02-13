@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from "astro:content";
+import BlogCard from "../BlogCard.astro";
+const allBlog = await getCollection("blog");
+---
+
+<!-- WRITING SECTION -->
+<section class="writing">
+  <div class="wrapper writing__wrapper">
+    <ul class="writing__list">
+      {
+        allBlog.map((post) => {
+          return (
+            <BlogCard
+              url={post.data.slug}
+              title={post.data.title}
+              image={post.data.image.src}
+              imageAlt={post.data.image.alt}
+              date={post.data.date.toDateString()}
+            />
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .writing__wrapper {
+    .writing__list {
+    }
+
+    .writing__list-item {
+      list-style: none;
+    }
+
+    .writing__link {
+    }
+  }
+</style>

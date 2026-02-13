@@ -3,21 +3,9 @@ import Layout from "../layouts/default.astro";
 import { getCollection } from "astro:content";
 
 const allBlog = await getCollection("blog");
+import Writings from "../components/sections/Writings.astro";
 ---
 
 <Layout>
-  <div class="wrapper">
-    <h1>TO DO: STYLING BLOG CARD</h1>
-    <ul>
-      {
-        allBlog.map((post) => {
-          return (
-            <li>
-              <a href={`/blog/${post.id}`}>{post.data.title}</a>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </div>
+  <Writings />
 </Layout>

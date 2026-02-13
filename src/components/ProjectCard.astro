@@ -3,9 +3,9 @@ const { img, url } = Astro.props;
 ---
 
 <div class="projects__card">
-  <a href={url} class="projects__link" '>
-    <img src={img} alt="" class="projects__thumbnail" />
-  </a>
+  <a href={url} class="projects__link" target="_blank" '>
+    <img src=`${img}` alt="" class="projects__thumbnail" /></a
+  >
 </div>
 
 <style is:global>
@@ -13,15 +13,17 @@ const { img, url } = Astro.props;
     overflow: hidden;
     border-radius: 8px;
     border: 8px solid var(--c-border);
+    width: 100%;
+    height: auto;
   }
 
   .projects__link {
   }
 
   .projects__thumbnail {
-    background-size: cover;
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 4px;
   }
 </style>

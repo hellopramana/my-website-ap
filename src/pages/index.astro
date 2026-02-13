@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/default.astro";
-import { getCollection, render } from "astro:content";
-const allBlog = await getCollection("blog");
 
 import FeaturedWork from "../components/sections/FeaturedWorks.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
+import Writings from "../components/sections/Writings.astro";
 ---
 
 <Layout
@@ -34,23 +33,7 @@ import Testimonials from "../components/sections/Testimonials.astro";
 
   <Testimonials />
 
-  <!-- WRITING SECTION -->
-  <section class="writing">
-    <div class="wrapper">
-      <h1>--TO DO: STYLING BLOG SECTION--</h1>
-      <ul>
-        {
-          allBlog.map((post) => {
-            return (
-              <li>
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </div>
-  </section>
+  <Writings />
 </Layout>
 
 <style>

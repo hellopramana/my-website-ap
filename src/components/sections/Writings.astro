@@ -1,12 +1,19 @@
 ---
 import { getCollection, render } from "astro:content";
 import BlogCard from "../BlogCard.astro";
+
+const { frontmatter } = Astro.props;
 const allBlog = await getCollection("blog");
+
+const blogDescending = allBlog.sort(
+  (a, b) => new Date(b.data.date) - new Date(a.data.date),
+);
 ---
 
 <!-- WRITING SECTION -->
 <section class="writing">
   <div class="wrapper writing__wrapper">
+    <h1 class="writing__heading">Writing</h1>
     <ul class="writing__list">
       {
         allBlog.map((post) => {
@@ -27,11 +34,18 @@ const allBlog = await getCollection("blog");
 
 <style>
   .writing__wrapper {
+    .writing__heading {
+      font-family: "Petrona Variable", serif;
+      font-size: var(--text-heading-m);
+      margin-block-end: var(--padding-40);
+    }
     .writing__list {
+      list-style-type: none;
+      display: grid;
+      gap: var(--padding-20);
     }
 
-    .writing__list-item {
-      list-style: none;
+    .writing__list {
     }
 
     .writing__link {

@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/blogLayout.astro
-title: How I Start Every Design Project
-date: 2026-02-24
-slug: how-i-start-design-project
+title: Design as a Way of Thinking
+date: 2025-08-17
+slug: design-as-a-way-of-thinking
 image:
   {
-    src: "/src/assets/blog/blog-placeholder-01.jpg",
+    src: "/src/assets/blog/blog-placeholder-04.jpg",
     alt: "blog image thumbnail",
   }
 ---

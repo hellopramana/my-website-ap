@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/blogLayout.astro
-title: Simplicity is hard
+title: Why Simplicity Is Harder Than It Looks
 date: 2026-01-30
-slug: simplicity-is-hard
+slug: Why Simplicity Is Harder Than It Looks
 image:
   {
-    src: "/src/assets/blog/blog-placeholder-01.jpg",
+    src: "/src/assets/blog/blog-placeholder-02.jpg",
     alt: "blog image thumbnail",
   }
 ---

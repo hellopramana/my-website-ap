@@ -2,10 +2,15 @@
 import Layout from "../layouts/default.astro";
 import { getCollection } from "astro:content";
 
+const pageTitle = "My Writing";
 const allBlog = await getCollection("blog");
 import Writings from "../components/sections/Writings.astro";
 ---
 
 <Layout>
-  <Writings />
+  <div class="wrapper">
+    <h1 style="text-align: center;">
+      {pageTitle} page is currently in building process :)
+    </h1>
+  </div>
 </Layout>

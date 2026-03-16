@@ -1,7 +1,35 @@
 ---
 import Layout from "./default.astro";
+
+const frontmatter = Astro.props
+const {blogTitle} = frontmatter;
 ---
 
-<Layout>
+<Layout pageTitle={blogTitle}>
   <slot />
 </Layout>
+
+<style is:global>
+  h1, h2, h3, h4 ,h5, h6, p {
+    margin-block: 1rem;
+  }
+
+  h2 {
+    margin-block-start: 5rem;
+  }
+
+  p, ul, li, a {
+    font-size: var(--fs-20);
+  }
+
+  ul {
+   padding-inline: 2em;
+  }
+
+  blockquote {
+    background-color: #fff;
+    padding-block: 0.25rem;
+    padding-inline: 1rem;
+    border-left: 10px solid var(--n900);
+  }
+</style>

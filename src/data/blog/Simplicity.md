@@ -1,20 +1,23 @@
 ---
 layout: ../../layouts/blogLayout.astro
-title: Design as a Way of Thinking
-date: 2025-08-17
-slug: design-as-a-way-of-thinking
+title: Why Simplicity Is Harder Than It Looks
+date: 2026-01-30
+slug: Why Simplicity Is Harder Than It Looks
 image:
   {
-    src: "/src/assets/blog/blog-placeholder-04.jpg",
+    src: "/src/assets/blog/blog-placeholder-02.jpg",
     alt: "blog image thumbnail",
   }
 ---
 
+<br>
+
 Every design project looks different on the surface. Different clients, different industries, different goals. But the way I start? Almost always the same.
+<br>
 
 Over time, I’ve learned that how you begin a project often determines how smoothly it runs. So instead of jumping straight into Figma or browsing inspiration, I follow a simple structure that keeps everything aligned from day one.
 
-Here’s how I start every design project.
+> Here’s how I start every design project.
 
 ## 1. I Clarify the Real Goal (Not Just the Request)
 

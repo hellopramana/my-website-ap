@@ -1,22 +1,16 @@
 ---
 layout: ../../layouts/blogLayout.astro
-title: Why Simplicity Is Harder Than It Looks
-date: 2026-01-30
-slug: Why Simplicity Is Harder Than It Looks
+title: Design as a Way of Thinking
+date: 2025-08-17
+slug: design-as-a-way-of-thinking
 image:
   {
-    src: "/src/assets/blog/blog-placeholder-02.jpg",
+    src: "/src/assets/blog/blog-placeholder-04.jpg",
     alt: "blog image thumbnail",
   }
 ---
 
-<br>
-
-Every design project looks different on the surface. Different clients, different industries, different goals. But the way I start? Almost always the same.
-
-<br>
-
-Over time, I’ve learned that how you begin a project often determines how smoothly it runs. So instead of jumping straight into Figma or browsing inspiration, I follow a simple structure that keeps everything aligned from day one.
+Every design project looks different on the surface. Different clients, different industries, different goals. But the way I start? Almost always the same. Over time, I’ve learned that how you begin a project often determines how smoothly it runs. So instead of jumping straight into Figma or browsing inspiration, I follow a simple structure that keeps everything aligned from day one.
 
 Here’s how I start every design project.
 
@@ -27,7 +21,8 @@ Clients usually come with a request:
 “I want a logo.”  
 “I need a landing page.”
 
-But what they actually need is rarely just that.
+But what they actually need is rarely just that.    
+Hello new line
 
 So the first thing I do is ask:
 
@@ -42,7 +37,7 @@ Design is not decoration. It’s a tool. And tools only work well when you know 
 
 Before thinking about colors or typography, I think about people.
 
-Who are they?  
+Who are they?   
 What are they struggling with?  
 What do they expect?  
 What would make them trust this brand?
@@ -71,8 +66,7 @@ The clearer the constraints, the stronger the outcome.
 
 ## 4. I Define Structure Before Style
 
-This is where many designers rush.
-
+This is where many designers rush.    
 Before choosing fonts or building visuals, I map out:
 
 - Information hierarchy

@@ -20,9 +20,13 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogLayout>
+<BlogLayout blogTitle={post.data.title}>
   <div class="wrapper">
+    <div class="blog__header">
     <h1>{post.data.title}</h1>
+    </div>
+    <div class="blog__content">
     <Content />
+    </div>
   </div>
 </BlogLayout>

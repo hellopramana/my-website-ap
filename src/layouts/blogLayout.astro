@@ -10,16 +10,20 @@ const {blogTitle} = frontmatter;
 </Layout>
 
 <style is:global>
-  h1, h2, h3, h4 ,h5, h6, p {
+  hr {
+    margin-block-start: 1rem;
+  }
+  h1{
     margin-block: 1rem;
   }
 
   h2 {
-    margin-block-start: 5rem;
+    margin-block-start: 4rem;
+    margin-block-end: 1rem;
   }
 
   p, ul, li, a {
-    font-size: var(--fs-20);
+    font-size: var(--text-body-m);
   }
 
   ul {

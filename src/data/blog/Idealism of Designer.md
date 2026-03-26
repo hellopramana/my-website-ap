@@ -8,6 +8,7 @@ image:
     src: "/src/assets/blog/20260324-Idealism of Designer.webp",
     alt: "Illustration of two face overlap represent different two mindset",
   }
+author: Aditya
 ---
 
 ## Back in 2018

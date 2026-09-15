@@ -1,0 +1,55 @@
+---
+// src/components/ContactForm.astro
+---
+
+<form id="contact-form" class="contact-form">
+<label class="contact-form__label">Name
+    <input type="text"  name="fi-sender-firstName" placeholder="First name" required class="contact-form__input"/>
+</label>
+<label class="contact-form__label">Email
+  <input type="email" name="fi-sender-email"     placeholder="Email" required class="contact-form__input"/>
+</label>
+<label class="contact-form__label">Your message
+  <textarea name="fi-text-message" placeholder="Message" rows="5" required class="contact-form__input"></textarea>
+</label>
+
+  <button type="submit">Send Message</button>
+  <p id="form-status" aria-live="polite"></p>
+  <div class="cf-turnstile" data-sitekey=0x4AAAAAAE1o1QgPu12Ea23i></div>
+</form>
+
+<script>
+  const FORM_ID = '2c9ipa61v0o'; // ← Replace with your Form ID
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const button = form.querySelector('button[type="submit"]');
+  // Load the Forminit SDK from the CDN
+  const sdk = document.createElement('script');
+  sdk.src = 'https://forminit.com/sdk/v1/forminit.js';
+  sdk.onload = () => {
+    const forminit = new Forminit();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Sending...';
+      button.disabled = true;
+
+      const { data, error } = await forminit.submit(FORM_ID, new FormData(form));
+
+      button.disabled = false;
+
+      if (error) {
+        status.textContent = error.message;
+        return;
+      }
+
+      status.textContent = 'Message sent successfully!';
+      form.reset();
+    });
+  };
+  document.body.appendChild(sdk);
+</script>
+
+<style>
+
+</style>

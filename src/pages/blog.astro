@@ -10,27 +10,27 @@ const allBlog = await getCollection("blog");
 <Layout>
   <div class="wrapper">
     <div class="writingsArchive__hero">
-    <h1 class="writingsArchive__header">
-      Tangible idea
-    </h1>
-    <p class="writingsArchive__text">Writing is one of many way to transform intangable idea to tangible form. It easier to share our abstract idea and train our thinking skill.</p>
+      <h1 class="writingsArchive__header">Tangible idea</h1>
+      <p class="writingsArchive__text">
+        Writing is one of many way to transform intangable idea to tangible
+        form. It easier to share our abstract idea and train our thinking skill.
+      </p>
     </div>
     <WritingsArchive />
   </div>
 </Layout>
 <style>
-.writingsArchive__hero {
-  display: grid;
-  align-content: center;
-  text-align: center;
-  .writingsArchive__header {
+  .writingsArchive__hero {
+    display: grid;
+    .writingsArchive__header {
+      font-family: "Petrona Variable", serif;
+      font-weight: 500;
+      font-size: var(--text-heading-l);
+    }
 
+    .writingsArchive__text {
+      padding-block: 1rem;
+      max-width: 60ch;
+    }
   }
-
-  .writingsArchive__text {
-    padding-block: 1rem;
-max-width: 60ch;
-margin: auto;
-  }
-}
 </style>

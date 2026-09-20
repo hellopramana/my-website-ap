@@ -1,0 +1,5 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "recommendations": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+}

@@ -10,7 +10,9 @@
       "Shell(echo \"=== astro@7.3.2 ===\"; npm view astro@7.3.2 version 2>&1; echo \"=== mdx@8.0.1 peerDeps ===\"; npm view @astrojs/mdx@8.0.1 peerDependencies 2>&1; echo \"=== node@11.1.5 peerDeps ===\"; npm view @astrojs/node@11.1.5 peerDependencies 2>&1; echo \"=== react@6.0.5 peerDeps ===\"; npm view @astrojs/react@6.0.5 peerDependencies 2>&1)",
       "Shell(echo \"=== @sanity/astro peerDeps ===\"; npm view @sanity/astro@3.3.1 peerDependencies 2>&1; echo \"=== @sanity/astro deps ===\"; npm view @sanity/astro@3.3.1 dependencies 2>&1; echo \"=== installed astro version ===\"; node -p \"require('./node_modules/astro/package.json').version\" 2>&1; echo \"=== installed mdx version ===\"; node -p \"require('./node_modules/@astrojs/mdx/package.json').version\" 2>&1)",
       "Shell(echo \"=== latest @sanity/astro ===\"; npm view @sanity/astro version 2>&1; echo \"=== latest peerDeps ===\"; npm view @sanity/astro peerDependencies 2>&1; echo \"=== versions with astro 7 support ===\"; npm view @sanity/astro versions --json 2>&1 | tail -40)",
-      "Shell(npx prettier --check src/components/ContactForm.astro 2>&1; echo \"exit: $?\")"
+      "Shell(npx prettier --check src/components/ContactForm.astro 2>&1; echo \"exit: $?\")",
+      "Shell(npx prettier --check src/pages/blog.astro)",
+      "Shell(npx prettier --write src/pages/blog.astro)"
     ],
     "deny": [],
     "defaultMode": "default"

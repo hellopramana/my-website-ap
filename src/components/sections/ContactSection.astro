@@ -1,35 +1,41 @@
 ---
-import ContactForm  from "../ContactForm.astro";
+import ContactForm from "../ContactForm.astro";
 ---
 
 <!-- featured works -->
 <section class="contact-section">
-    <div class="wrapper contact__wrapper">
-        <div class="contact__content">
-            <h1>Let's Talk</h1>
-            <br>
-            <p>
-            I'm open to discuss and help you on your project.
-                <br>
-                <br>
-             You can reach out to me by this form or send friendly message on my Instagram, X, Threads, or LinkedIn.
-             Feel free to choose anything that works for you.
-            </p>
-        </div>
-        <ContactForm/>
+  <div class="wrapper contact__wrapper">
+    <div class="contact__content">
+      <h1 class="contact__heading">Let's Talk</h1>
+      <br />
+      <p class="contact__description">
+        I'm open to discuss and help you on your project.
+        <br />
+        <br />
+        You can reach out to me by this form or send friendly message on my Instagram,
+        X, Threads, or LinkedIn. Feel free to choose anything that works for you.
+      </p>
     </div>
+    <ContactForm />
+  </div>
 </section>
 
 <style>
-    .contact__wrapper {
-        display: grid;
-        
-        column-gap: 5rem;
-    }
-
-    @media (width > 900px) {
   .contact__wrapper {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+
+    column-gap: 5rem;
   }
-}
+
+  @media (width > 900px) {
+    .contact__wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .contact__heading {
+    font-family: "Petrona Variable", serif;
+    font-weight: 500;
+    font-size: var(--text-heading-l);
+  }
 </style>

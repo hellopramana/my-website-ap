@@ -1,14 +1,9 @@
 ---
+import ContactSection from "../components/sections/ContactSection.astro";
 import Layout from "../layouts/default.astro";
-import  ContactForm from "../components/ContactForm.astro";
 const pageTitle = "My Contact";
 ---
 
 <Layout>
-  <div class="wrapper">
-    <h1 style="text-align: center;">
-      {pageTitle} page is currently in building process :)
-    </h1>
-    <ContactForm/>
-  </div>
+<ContactSection/>
 </Layout>

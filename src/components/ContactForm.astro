@@ -3,16 +3,17 @@
 ---
 
 <form id="contact-form" class="contact-form">
-<label class="contact-form__label">Name
-    <input type="text"  name="fi-sender-firstName" placeholder="First name" required class="contact-form__input"/>
-</label>
-<label class="contact-form__label">Email
-  <input type="email" name="fi-sender-email"     placeholder="Email" required class="contact-form__input"/>
-</label>
-<label class="contact-form__label">Your message
-  <textarea name="fi-text-message" placeholder="Message" rows="5" required class="contact-form__input"></textarea>
-</label>
-
+  <div class="contact-form__field">
+    <label class="contact-form__label">Name</label>
+  <input type="text"  name="fi-sender-firstName" placeholder="First name" required class="contact-form__input"/>
+  </div>
+<div class="contact-form__field">
+<label class="contact-form__label">Email</label>
+<input type="email" name="fi-sender-email" placeholder="Email" required class="contact-form__input"/></div>
+<div class="contact-form__field">
+ <label class="contact-form__label">Your message</label>
+<textarea name="fi-text-message" placeholder="Message" rows="5" required class="contact-form__input"></textarea>
+ </div>
   <button type="submit">Send Message</button>
   <p id="form-status" aria-live="polite"></p>
   <div class="cf-turnstile" data-sitekey=0x4AAAAAAE1o1QgPu12Ea23i></div>
@@ -51,5 +52,33 @@
 </script>
 
 <style>
+.contact-form {
+  display: grid;
+  row-gap: var(--padding-20);
+  border-radius: 1rem;
+  font-family: inherit;
+}
 
+.contact-form__field {
+    display: grid;
+    row-gap: 0.5em;
+  }
+
+.contact-form__input {
+  box-sizing: border-box;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--n400);
+}
+
+.contact-form button {
+  justify-self: start;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--n900);
+  color: var(--n100);
+}
 </style>

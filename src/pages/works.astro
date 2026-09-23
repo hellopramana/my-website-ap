@@ -1,12 +1,58 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
+import works from "../collections/works.json";
 import Layout from "../layouts/default.astro";
-const pageTitle = "My Works";
+const pageName = "Works";
 ---
 
-<Layout>
-  <div class="wrapper">
-    <h1 style="text-align: center;">
-      {pageTitle} page is currently in building process :)
-    </h1>
-  </div>
+<Layout
+  pageTitle=`Aditya Pramana | ${pageName}`
+  description="Visual Design & Web Developer"
+>
+  <section class="works">
+    <div class="wrapper">
+      <div class="works__hero">
+        <h1 class="works__header">Abstract to Concrete</h1>
+        <p class="works__text">
+          For the past 5 years, I’ve been working on design agency as graphic
+          designer. To fuel my digital craft side, I’ve been collaborate with
+          passioned business and startup owner.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="works__grid">
+    <div class="worksGrid__wrapper wrapper">
+      <div class="worksGrid__list">
+        {
+          works.map((work) => {
+            return <ProjectCard img={work.image} url={work.url} />;
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .works__hero {
+      display: grid;
+      .works__header {
+        font-family: "Petrona Variable", serif;
+        font-weight: 500;
+        font-size: var(--text-heading-l);
+      }
+
+      .works__text {
+        padding-block: 1rem;
+        max-width: 60ch;
+      }
+    }
+
+    .worksGrid__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 1rem;
+    }
+  </style>
 </Layout>

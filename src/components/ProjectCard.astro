@@ -3,9 +3,9 @@ const { img, url } = Astro.props;
 ---
 
 <div class="projects__card">
-  <a href={url} class="projects__link" target="_blank" '>
-    <img src=`${img}` alt="" class="projects__thumbnail" /></a
-  >
+  <a href={url} class="projects__link" target="_blank" rel="noopener">
+    <img src={img} alt="" class="projects__thumbnail" />
+  </a>
 </div>
 
 <style is:global>

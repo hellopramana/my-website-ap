@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.1",
-    "@astrojs/netlify": "^8.2.5",
+    "@astrojs/netlify": "^6.5.13",
     "@astrojs/node": "^11.1.5",
     "@astrojs/react": "^6.0.5",
     "@fontsource-variable/petrona": "^5.2.8",
@@ -20,10 +20,11 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^7.3.2",
+    "astro-icon": "^1.2.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-is": "^19.2.4",
-    "sanity": "^5.17.1",
+    "sanity": "^5.14.1",
     "styled-components": "^6.3.12",
     "zod": "^3.25.76"
   },

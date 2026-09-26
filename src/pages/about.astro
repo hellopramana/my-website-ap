@@ -1,12 +1,115 @@
 ---
 import Layout from "../layouts/default.astro";
+import { Icon } from "astro-icon/components";
+
 const pageTitle = "My About";
 ---
 
 <Layout>
-  <div class="wrapper">
-    <h1 style="text-align: center;">
-      {pageTitle} page is currently in building process :)
-    </h1>
-  </div>
+  <h1 class="visually-hidden">About Me</h1>
+  <section class="about-hero">
+    <div class="wrapper about__wrapper">
+      <div class="about__column1">
+        <div class="about__rich-content">
+          <h2 class="about__rich-content-heading">Me as personal</h2>
+          <p>
+            When I’m not in front of my laptop and pc. Sometimes I do run,
+            traveling, and ride my green bike. As you can see, most of my photos
+            is green and blue. Even my bike is green! Its because I love nature
+            and summer color. Of course, live my life as a designer made me
+            close with coffee things. While traveling, I’m so excited to explore
+            new coffeeshop, coffee beans, coffee roastery, and many things about
+            coffee. So don’t be surprised when you come to Bali and see me
+            working as a barista in a coffeeshop. That’s one of my hobby. What
+            are the other? I love photography, book binding, writing, & reading.
+            These hobbies help me to improve my self as a creative person.
+          </p>
+        </div>
+
+        <div class="about__rich-content">
+          <h2 class="about__rich-content-heading">Work</h2>
+          <p>
+            My journey began in 2016 as a Graphic Design Intern at Kesato.co. I
+            later worked as a Photo Editor at Inggrid Angelia Photography,
+            combining my love for visual storytelling with photography. When the
+            pandemic hit in 2019, I used the disruption as a chance to rethink
+            my direction. I began learning UI/UX, website development, and
+            product design, gradually moving from creating visuals to thinking
+            more deeply about how those visuals work within a bigger experience.
+            In 2021, I joined Fugazi.co as a Design Strategist, where I’ve been
+            working with teams and business owners to shape brands, digital
+            products, and visual experiences ever since. Outside of work, I
+            freelance on website projects and occasionally pick up a camera
+            again.
+          </p>
+        </div>
+
+        <div class="about__rich-content">
+          <h2 class="about__rich-content-heading">Clients & Collaborations</h2>
+          <div class="about__logo-grid">
+            <Icon
+              name="logos/Analog-Id"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            />
+            <Icon
+              name="logos/Studio Fondue"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            /><Icon
+              name="logos/ASC"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            /><Icon
+              name="logos/Sradha Coffee"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            /><Icon
+              name="logos/Tone App"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            /><Icon
+              name="logos/Catalyze"
+              class="logo"
+              width="156.67px"
+              height="auto"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="about__column2">
+        <img src="/src/assets/IMG_1239 2.png" alt="Photo of Aditya Pramana" />
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.75rem;
+  }
+
+  .about__rich-content {
+    padding-block-end: 5rem;
+  }
+
+  .about__rich-content:last-child {
+    padding-block-end: inherit;
+  }
+
+  .about__rich-content-heading {
+    padding-block-end: 1.25rem;
+  }
+
+  .about__logo-grid {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+  }
+</style>

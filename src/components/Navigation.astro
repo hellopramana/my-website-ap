@@ -18,6 +18,22 @@ import menus from "../collections/menus.json";
   </ul>
 </nav>
 
+<nav class="wrapper nav__wrapper-mobile">
+  <ul class="nav__links">
+    {
+      menus.map((menu) => {
+        return (
+          <li class="nav__item">
+            <a href={menu.url} class="nav__link">
+              {menu.name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
 <style>
   /* Navigation */
   .nav__wrapper {
@@ -47,5 +63,31 @@ import menus from "../collections/menus.json";
 
   .nav__link:hover {
     opacity: 0.5;
+  }
+
+  .nav__wrapper-mobile {
+    display: none;
+  }
+
+  @media (max-width: 750px) {
+    .nav__wrapper {
+      display: none;
+    }
+
+    .nav__wrapper-mobile {
+      background-color: var(--n100);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .nav__links {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>

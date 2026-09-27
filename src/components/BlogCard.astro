@@ -45,4 +45,14 @@ const { url, title, date, image, imageAlt } = frontmatter;
   .writing__link:hover {
     color: #a1a1a1;
   }
+
+  @media (max-width: 375px) {
+    .writing__list-item {
+      flex-direction: column;
+    }
+
+    .writing__image {
+      width: 100%;
+    }
+  }
 </style>

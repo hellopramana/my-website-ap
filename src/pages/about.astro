@@ -83,7 +83,11 @@ const pageTitle = "My About";
         </div>
       </div>
       <div class="about__column2">
-        <img src="/src/assets/IMG_1239 2.png" alt="Photo of Aditya Pramana" />
+        <img
+          src="/src/assets/IMG_1239 2.png"
+          alt="Photo of Aditya Pramana"
+          class="about__photo"
+        />
       </div>
     </div>
   </section>
@@ -94,10 +98,11 @@ const pageTitle = "My About";
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 6.75rem;
+    row-gap: var(--padding-80);
   }
 
   .about__rich-content {
-    padding-block-end: 5rem;
+    padding-block-end: var(--padding-80);
   }
 
   .about__rich-content:last-child {
@@ -111,5 +116,25 @@ const pageTitle = "My About";
   .about__logo-grid {
     display: grid;
     grid: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .about__photo {
+    position: sticky;
+    top: 1rem;
+  }
+
+  @media (max-width: 375px) {
+    .about__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+    }
+
+    .about__column2 {
+      grid-row: -1 / 1;
+    }
+
+    .about__photo {
+      position: inherit;
+    }
   }
 </style>

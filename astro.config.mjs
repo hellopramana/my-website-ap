@@ -17,7 +17,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static",
+  output: "server",
   adapter: netlify({
     imageCDN: false,
     middlewareMode: "edge",

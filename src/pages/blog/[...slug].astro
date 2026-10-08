@@ -24,11 +24,6 @@ const { Content } = await render(post);
   <div class="wrapper blog__wrapper">
     <div class="blog__header">
       <h1>{post.data.title}</h1>
-      <img
-        src={post.data.image.src}
-        alt={post.data.image.alt}
-        class="blog__image"
-      />
 
       <span class="blog__date"
         >{post.data.date?.toDateString()} | by {post.data.author}</span

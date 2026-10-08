@@ -4,15 +4,17 @@ import Layout from "../layouts/default.astro";
 import FeaturedWork from "../components/sections/FeaturedWorks.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import Writings from "../components/sections/Writings.astro";
+const matches = import.meta.glob("../assets/*.{png,webp}", { eager: true });
+const posts = Object.values(matches);
+import myPhoto from "@assets/aditya-photo.png";
 import { Image } from "astro:assets";
-import myPhoto from "/src/assets/aditya-photo.png";
 ---
 
 <Layout pageTitle="Aditya Pramana" description="Visual Design & Web Developer">
   <section class="hero">
     <div class="wrapper hero__wrapper">
-      <img
-        src="/src/assets/aditya-photo.png"
+      <Image
+        src={myPhoto}
         alt="headshot of Aditya Pramana"
         class="hero__image"
         width="75"

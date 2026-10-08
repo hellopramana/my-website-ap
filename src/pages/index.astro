@@ -5,13 +5,14 @@ import FeaturedWork from "../components/sections/FeaturedWorks.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import Writings from "../components/sections/Writings.astro";
 import { Image } from "astro:assets";
+import myPhoto from "/src/assets/aditya-photo.png";
 ---
 
 <Layout pageTitle="Aditya Pramana" description="Visual Design & Web Developer">
   <section class="hero">
     <div class="wrapper hero__wrapper">
       <Image
-        src="/src/assets/aditya-photo.png"
+        src={myPhoto}
         alt="headshot of Aditya Pramana"
         class="hero__image"
         width="75"

@@ -17,7 +17,10 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: netlify(),
+  output: "server",
+  adapter: netlify({
+    imageCDN: false,
+  }),
   integrations: [
     mdx(),
     react(),

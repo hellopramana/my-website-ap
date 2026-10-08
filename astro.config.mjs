@@ -19,7 +19,8 @@ import icon from "astro-icon";
 export default defineConfig({
   output: "server",
   adapter: netlify({
-    imageCDN: false,
+    imageCDN: true,
+    middlewareMode: "edge",
   }),
   integrations: [
     mdx(),

@@ -1,6 +1,7 @@
 ---
+import { getCollection, getEntry, render } from "astro:content";
+const works = await getCollection("works");
 import ProjectCard from "../components/ProjectCard.astro";
-import works from "../collections/works.json";
 import Layout from "../layouts/default.astro";
 const pageName = "Works";
 ---
@@ -27,7 +28,13 @@ const pageName = "Works";
       <div class="worksGrid__list">
         {
           works.map((work) => {
-            return <ProjectCard img={work.image} url={work.url} />;
+            return (
+              <ProjectCard
+                image={work.data.cover?.image.src}
+                url={work.data.url}
+                alt={work.data.alt}
+              />
+            );
           })
         }
       </div>

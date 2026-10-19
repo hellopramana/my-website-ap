@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/default.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import myPhoto from "../assets/IMG_1239 2.png";
 
-const pageTitle = "My About";
+const pageTitle = "About";
 ---
 
 <Layout>
@@ -83,9 +85,9 @@ const pageTitle = "My About";
         </div>
       </div>
       <div class="about__column2">
-        <img
-          src="/src/assets/IMG_1239 2.png"
-          alt="Photo of Aditya Pramana"
+        <Image
+          src={myPhoto}
+          alt={"Photo of Aditya Pramana"}
           class="about__photo"
         />
       </div>

@@ -25,6 +25,6 @@
     "jobTitle": "Sales & Marketing Manager",
     "testimonial": "Very professional , quick response and easy to communicate",
     "featured": true,
-    "image": "../../src/assets/Victoria.png"
+    "image": "/src/assets/Victoria.png"
   }
 ]

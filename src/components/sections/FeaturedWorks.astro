@@ -1,8 +1,6 @@
 ---
 // import featuredWorks from "../../collections/featuredworks.json";
 import { getCollection, getEntry, render } from "astro:content";
-
-const { frontmatter } = Astro.props;
 const featuredWorks = await getCollection("works", ({ data }) => {
   return data.featured == true;
 });
@@ -17,7 +15,13 @@ import ProjectCard from "../ProjectCard.astro";
       <div class="projects__list">
         {
           featuredWorks.map((work) => {
-            return <ProjectCard img={work.data.image} url={work.data.url} />;
+            return (
+              <ProjectCard
+                image={work.data.cover?.image.src}
+                url={work.data.url}
+                alt={work.data.alt}
+              />
+            );
           })
         }
       </div>

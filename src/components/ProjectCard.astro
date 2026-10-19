@@ -1,11 +1,12 @@
 ---
-const frontmatter = Astro.props;
-const { img, url } = frontmatter;
+import { Image } from "astro:assets";
+const { image, url, alt = "" } = Astro.props;
 ---
 
 <div class="projects__card">
   <a href={url} class="projects__link" target="_blank" rel="noopener">
-    <img src={img} alt="" class="projects__thumbnail" />
+    <!-- <img src={img} alt={alt} class="projects__thumbnail" /> -->
+    <img src={image} alt={alt} class="projects__thumbnail" />
   </a>
 </div>
 

@@ -1,9 +1,8 @@
 // Content configuration for Astro build-in CMS
 
 import { defineCollection } from "astro:content";
-import { glob } from "astro/loaders";
+import { glob, file } from "astro/loaders";
 import { z } from "astro/zod";
-import { file } from "astro:schema";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/blog" }),
@@ -37,7 +36,7 @@ const works = defineCollection({
 });
 
 const testimonials = defineCollection({
-  loader: file("/src/collections/testimonials.json"),
+  loader: file("src/collections/testimonials.json"),
   schema: ({ image }) =>
     z.object({
       name: z.string(),
@@ -48,4 +47,4 @@ const testimonials = defineCollection({
     }),
 });
 
-export const collections = { blog, works };
+export const collections = { blog, works, testimonials };

@@ -3,6 +3,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { file } from "astro:schema";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/blog" }),
@@ -32,6 +33,18 @@ const works = defineCollection({
       alt: z.string().optional(),
       url: z.string(),
       featured: z.boolean(),
+    }),
+});
+
+const testimonials = defineCollection({
+  loader: file("/src/collections/testimonials.json"),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      jobTitle: z.string(),
+      testimonial: z.string(),
+      featured: z.boolean(),
+      image: image(),
     }),
 });
 

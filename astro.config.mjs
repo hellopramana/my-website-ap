@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
 import netlify from "@astrojs/netlify";
 
@@ -22,17 +22,8 @@ export default defineConfig({
     imageCDN: false,
     middlewareMode: "edge",
   }),
-  integrations: [
-    mdx(),
-    react(),
-    icon(),
-    // sanity({
-    //   projectId: "isabjz71",
-    //   dataset: "production",
-    //   // Set useCdn to false if you're building statically.
-    //   useCdn: false,
-    //   apiVersion: "2025-01-28", // insert the current date to access the latest version of the API
-    //   studioBasePath: "/studio",
-    // }),
-  ],
+  integrations: [mdx(), react(), icon()],
+  image: {
+    service: passthroughImageService(),
+  },
 });

@@ -1,9 +1,12 @@
 ---
 import ContactSection from "../components/sections/ContactSection.astro";
 import Layout from "../layouts/default.astro";
-const pageTitle = "My Contact";
+const pageName = "Contact";
 ---
 
-<Layout>
-<ContactSection/>
+<Layout
+  pageTitle=`Aditya Pramana | ${pageName}`
+  description="Visual Design & Web Developer"
+>
+  <ContactSection />
 </Layout>

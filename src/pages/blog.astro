@@ -7,7 +7,10 @@ const pageTitle = "My Writing";
 const allBlog = await getCollection("blog");
 ---
 
-<Layout>
+<Layout
+  pageTitle=`Aditya Pramana | ${pageTitle}`
+  description="Visual Design & Web Developer"
+>
   <div class="wrapper">
     <div class="writingsArchive__hero">
       <h1 class="writingsArchive__header">Tangible idea</h1>

@@ -3,6 +3,8 @@
 import { defineCollection } from "astro:content";
 import { glob, file } from "astro/loaders";
 import { z } from "astro/zod";
+import { isDraft } from "sanity";
+import { boolean } from "astro:schema";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/blog" }),
@@ -14,6 +16,7 @@ const blog = defineCollection({
       image: image(),
       alt: z.string().optional(),
       author: z.string(),
+      isDraft: boolean(),
     }),
 });
 

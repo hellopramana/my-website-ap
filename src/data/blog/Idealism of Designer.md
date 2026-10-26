@@ -6,6 +6,7 @@ slug: idealism-of-designer
 image: "/src/assets/blog/20260324-Idealism of Designer.webp"
 alt: "Illustration of two face overlap represent different two mindset"
 author: Aditya
+isDraft: false
 ---
 
 ## Back in 2018

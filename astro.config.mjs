@@ -17,6 +17,14 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    assetsInclude: ['**/*.base', '**/.obsidian/**', '**/_bases/**'],
+    server: {
+      watch: {
+        ignored: ['**/.obsidian/**', '**/_bases/**', '**/bases/**', '**/_home/**', '**/home/**', '**/_base/**', '**/base/**']
+      }
+    }
+  },
   output: "server",
   adapter: netlify({
     imageCDN: false,
